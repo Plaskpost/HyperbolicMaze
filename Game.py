@@ -4,7 +4,6 @@ import time
 import pygame
 import numpy as np
 
-import ScreenCapture
 import config
 
 import MiniMap
@@ -14,7 +13,7 @@ from Rendering3D import Rendering3D
 from Explorer import Player
 
 
-def run_game(default_render="3D", maze=None, include_mini_map=True, mini_map_generates_tiles=False, screen_capture=False):
+def run_game(default_render="3D", maze=None, include_mini_map=True, mini_map_generates_tiles=False):
     if config.fixed_seed:
         np.random.seed(config.seed)
     explorer = Player()
@@ -43,9 +42,6 @@ def run_game(default_render="3D", maze=None, include_mini_map=True, mini_map_gen
                 renderer.update()
                 pygame.display.flip()
                 pygame.display.update()
-
-                if screen_capture:
-                    ScreenCapture.save_frame(renderer.screen)
 
                 last_render_time = current_time
 
