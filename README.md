@@ -11,6 +11,6 @@ You may clone the project and try it out yourself using
 
 ```bash
 https://github.com/Plaskpost/PythonHobbyProjects.git
-
+```
 ## Usage
 The file Game.py contains and calls the function run_game() that starts the game.
